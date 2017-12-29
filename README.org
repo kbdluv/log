@@ -1,6 +1,6 @@
 * Passing on Magit for now
   _Friday, December 29th, 2017._
-
+  
   First of all, can we just assume free text like this (that is, text that's inside a heading, but not one itself or not any other kind of data) is Markdown?
 
   I miss the easy code blocks with 4 spaces and backticks, and googling org mode code block just scared the shit out of me.
@@ -17,6 +17,7 @@
 
    It's also hard to compete with my terminal-based git-fu, with all my beautiful auto-completed git aliases. Check this out!:
 
+   #+BEGIN_SRC bash
     alias ga='git add'
     alias gb='git branch'
     alias gba='git branch -a'
@@ -32,6 +33,7 @@
     alias gs='git status'
     alias gt='git stash'
     alias gta='git stash apply'
+   #+END_SRC
 
    Now pair that with [[https://superuser.com/a/437508][this amazing bash script]] that adds completion to aliases, and you've got a killer combo. This stuff is welded into my fingers.
 
