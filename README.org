@@ -1,0 +1,54 @@
+* Hello Org Log
+  Thursday, December 28, 2017.
+
+  So this is me trying to learn how to blog some links with commentary without
+  leaving Emacs.
+
+  When I say Emacs from now on I mean "my l33t h4x0r Remacs HEAD +
+  Spacemacs@develop super duper setup."
+
+  What that really means is that I'm a n00b who didn't want to start with
+  "vanilla" Emacs and spend the next year setting it up, and just went with the
+  "batteries included" approach.
+
+  It seems like Spacemacs is the Ubuntu of Emacs, and I'm all for (K|)Ubuntus.
+
+  Now, building Remacs and switching to the develop branch of Spacemacs was so
+  breezeful and piece-of-cakely that it barely counts towards my street credit
+  score. It does hugely towards their developers' though.
+
+  Thank you, Wilfred Hughes, Sylvian Benner, et al. 🙏
+
+** One Org File
+   What I know about org-mode so far is that it's a tree of stuff. That's about
+   it.
+
+   So for now this log will be a single org file that I'll push to Github (much
+   to the chagrin of whom's name I'm deliberately not camel-caseing).
+
+   The single org-file structure seems to have worked pretty well for [[http://endlessparentheses.com/how-i-blog-one-year-of-posts-in-a-single-org-file.html][Mr.
+   Malabarba]], so let's start there.
+
+   Of course, his setup is light-years ahead of anything I could dream of coming
+   up with, but hey, gotta start somewhere.
+
+   Github automatically adds `#` links to headings, so each post gets its own URL. This is the simplest Org blog that could possibly work.
+
+** TODOs
+   What's an Org file without a bunch of TODOs?
+
+*** TODO Figure out how to commit and push from within Emacs (no idea how to use Magit yet.)
+*** TODO Figure out how to properly timestamp org-mode headings.
+*** TODO Figure out how to display and input emojis on Emacs.
+    Seriously, this is not built in?? Where are your priorities, people? 🤨
+** Links
+*** https://github.com/Wilfred/remacs
+    Give Remacs a try, you've got nothing to lose!
+
+    It's super easy to set up, won't break your Spacemacs, tracks the Emacs repo
+    so you're always up to date, and... it's like Servo, but for Emacs, right?
+    Gotta be good.
+*** http://sachachua.com/emacs-news
+    Good recap on the current weekly events in Emacs world. Also includes
+    Spacemacs links. Lots of advanced stuff, but nice for getting up to speed
+    with the community side of things.
