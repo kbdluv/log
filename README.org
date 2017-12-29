@@ -1,5 +1,43 @@
+* Passing on Magit for now
+  _Friday, December 29th, 2017._
+
+  First of all, can we just assume free text like this (that is, text that's inside a heading, but not one itself or not any other kind of data) is Markdown?
+
+  I miss the easy code blocks with 4 spaces and backticks, and googling org mode code block just scared the shit out of me.
+
+  I'm sure there are a bunch of keybindings to make the pill easier to swallow, but the bare syntax just looks like a lot of typing, and hard on the eyes.
+
+** Back to Bash
+
+   I figured out the basic Magit commands, squeezed a commit out, and managed to push it to Github. But boy was that clunky.
+
+   I'm especially disfond of what I could make the `git log` equivalent churn out. For some reason the diff lines were cut off at around 60% width.
+
+   Plus, +I hadn't set up `evil-magit`+, so I kept spitting out unwanted commands whilst trying to navigate text, it was a mess. (I later found out that the =git= layer includes =evil-magit=, but I managed to make a mess anyway. On a happier note, I found out that `=` replaces backticks for inline code formatting.)
+
+   It's also hard to compete with my terminal-based git-fu, with all my beautiful auto-completed git aliases. Check this out!:
+
+    alias ga='git add'
+    alias gb='git branch'
+    alias gba='git branch -a'
+    alias gc='git checkout'
+    alias gd='git diff -w'
+    alias gf='git fetch'
+    alias gi='git diff -w --staged'
+    alias gl='git log --stat'
+    alias glp='git log --stat -p'
+    alias gm='git merge'
+    alias gp='git push'
+    alias gpl='git pull'
+    alias gs='git status'
+    alias gt='git stash'
+    alias gta='git stash apply'
+
+   Now pair that with [[https://superuser.com/a/437508][this amazing bash script]] that adds completion to aliases, and you've got a killer combo. This stuff is welded into my fingers.
+
+   So for now I'll take a step back and learn how drop iTerm2 in favor of some Emacs terminal first, _then_ start dragging in what makes sense.
 * Hello Org Log
-  Thursday, December 28, 2017.
+  _Thursday, December 28th, 2017._
 
   So this is me trying to learn how to blog some links with commentary without
   leaving Emacs.
@@ -37,10 +75,11 @@
 ** TODOs
    What's an Org file without a bunch of TODOs?
 
-*** TODO Figure out how to commit and push from within Emacs (no idea how to use Magit yet.)
-*** TODO Figure out how to properly timestamp org-mode headings.
+*** DONE Figure out how to commit and push from within Emacs (no idea how to use Magit yet.)
+    CLOSED: [2017-12-29 Fri 11:25]
 *** TODO Figure out how to display and input emojis on Emacs.
     Seriously, this is not built in?? Where are your priorities, people? 🤨
+*** TODO Figure out how to properly timestamp org-mode headings.
 ** Links
 *** https://github.com/Wilfred/remacs
     Give Remacs a try, you've got nothing to lose!
