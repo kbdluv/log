@@ -1,3 +1,77 @@
+* Emojimacs
+  _Sunday, December 31th, 2017._
+
+  So I set myself three goals for today:
+
+  - See emojis inside Emacs.
+  - Search and insert emojis inside Emacs.
+  - Figure out an easy way to type emoji combos. (The native macOS Command-Ctrl-Space picker disappears every time you type out an emoji, so it sucks for making sequences like 😂😂😂😂😂 or combos like 🍑💨.)
+
+  Obs.: when I say "emoji" I'm referring to Unicode emojis. There are different solutions depending on whether you want to display Github or other types of emoji too.
+
+** 1A) Seeing emojis, first pass
+  The [[https://github.com/syl20bnr/spacemacs/tree/master/layers/%252Bfun/emoji][Spacemacs emoji layer]] uses an [[https://github.com/syl20bnr/emacs-emoji-cheat-sheet-plus][emoji package]] that hasn't seen an update in a while.
+
+  So I went with [[https://twitter.com/_iqbalansari][Iqbal Ansari]]'s [[https://github.com/iqbalansari/emacs-emojify][emacs-emojify]]. Though it also doesn't include the latest emoji, as evidenced by the glaring omission of the [[https://emojipedia.org/face-with-one-eyebrow-raised/][Colbert emoji]] 🤨, it does have a more recent last commit date.
+
+  It worked, and I could see emoji images, albeit a bit large and not too pretty.
+
+  But then I found out kind of by accident that actually Emacs did support *native emojis* on macOS (including the Colbert!), but that they were removed, and that it was a big scandal. Who knew emoji could get so heated 🌶!
+
+  To be fair, though I use proprietary hardware and software (MBP & MacOS), I sympathize very much with the FOSS cause and I understand the reasoning behind GNU Emacs' decision. The interoperability argument and the [[https://news.ycombinator.com/item?id=13012275][analogy]] to web standards and Embrace-Extend-Extinguish are also sound.
+
+  But by then I had spent almost a day on this emoji thing, and I was hellbent on getting my funnies right!
+
+** 1B) Seeing emojis, final solution
+
+   So I scraped =emacs-emojify= from my configs and went back to the drawing board. Another couple pomodoros and googles later I had come up with the solution, which I'll present below without more pointless narration:
+
+   - First of all you have to be compiling Emacs from source. Thankfully I was already running Remacs, which for now requires you to build from source, so I already had a cloned repo and the longer first compilation done. It's super easy to do, you should totally [[https://github.com/Wilfred/remacs][check it out]]. Then,
+   - =git revert 9344612d3cd164317170b6189ec43175757e4231=
+   - =./configure --with-ns=
+   - =make && make install=
+   - Add =(set-fontset-font t 'symbol (font-spec :family "Apple Color Emoji") frame 'prepend)= to =spacemacs/user-config= in your =.spacemacs=.
+
+   And you're done!
+
+  *UPDATE*: now you don't even need to do the *git revert* yourself if you're on Remacs, because [[https://github.com/Wilfred/remacs/pull/567][this PR by yours truly]] has landed. W00t! 😈🙌
+
+** 2) Searching and inserting emojis
+  Emojify could've just worried about /displaying/ emojis and called it a day. It would have still made it a great package. But it went further and implemented two insertion modes, and it deserves credit for that.👏👏👏
+
+  Though I couldn't make the =emojify-apropos-emoji= copy commands work, the =emojify-insert-emoji= worked pretty well.
+
+  So while I'm no longer using =emojify='s emoji /displaying/ features, it's definitely back on my packages list for /inserting/ (some) emojis.
+
+  I also tried =company-emoji= but couldn't get it to work.
+
+** 3) Emoji combos
+   Picking from a filterable list is fine when you want to insert /one/ emoji.
+
+   But when you want to insert a handful, it becomes very tedious.
+
+   What I /really/ wanted was a *virtual keyboard* with memory of the most recently inserted symbols.
+
+   This could be achieved by making =emojify= 1) sort emojis by MRU, 2) stay open after inserting a symbol, and 3) assign numbers to the first entries so you could type quick succession of 11243111 and have your complex multi-face emotional expression.
+
+   This sounds like a great PR for when I get into writing elisp.
+
+   Until then, I'll be using Chrome's address bar as a temp buffer to both use more recent emojis and to copy/paste my way to combos. Oh well 😞
+
+   I didn't want to end on a sad note so here's some sparkles  🎊🎉🎈🎆
+
+   Happy New Year!! 🤩🤩🤩
+
+** TODOs
+*** TODO Implement this vim tip in Spacemacs evil with [[http://vim.wikia.com/wiki/Capitalize_words_and_regions_easily][various capitalization goodies]]
+*** TODO Meta TODO: make TODO headings render differently in org-ruby. This sucks.
+** Links
+*** https://github.com/alpha22jp/atomic-chrome
+    Seriously awesome extension that allows you to use Emacs to write to a textarea or contenteditable field in Chrome, while keeping them in sync in real time via websockets.
+
+    The only thing it's missing is adding an "Edit" link to the page itself so you can dispatch the command with Vimium instead of mousing over to the extension button and clicking it.
+** TILs
+*** =C-c C-l= lets you edit an org-mode link when the point is on it
 * Org WYSIWYGings
   _Saturday, December 30th, 2017._
 
