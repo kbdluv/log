@@ -1,6 +1,20 @@
+* Org WYSIWYGings
+  _Saturday, December 30th, 2017._
+
+  I don't know what I found so scary about =#+BEGIN_SRC= and =#+END_SRC=, but I appreciate the built-in syntax highlighting that comes with org-mode once you specify the language.
+
+  What I found out is that Org mode is more WYSIWYG than I had imagined. That's cool but not so cool sometimes.
+
+  Like when I use =, i l= to add links, I'm barely aware of what the text format for links actually looks like. (I just googled it now and it's =[[url][text]]=. And I can't even figure out [[https://emacs.stackexchange.com/questions/37803/on-org-mode-urltext-displays-as-link-instead-of-escaped-string][how to see the syntax string instead of the WYSIWYGed link]] :|)
+
+  I think I'd rather have all the actual characters visible, but styled differently to show syntax application, like with *bold*, where the text gets styled, but I still see the asterisks.
+
+** TODOs
+*** TODO Make live preview / hot reload possible with org-ruby
+    I want to know what my makeshift blog will look like before pushing to Github.
 * Passing on Magit for now
   _Friday, December 29th, 2017._
-  
+
   First of all, can we just assume free text like this (that is, text that's inside a heading, but not one itself or not any other kind of data) is Markdown?
 
   I miss the easy code blocks with 4 spaces and backticks, and googling org mode code block just scared the shit out of me.
